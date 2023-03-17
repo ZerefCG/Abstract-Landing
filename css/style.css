@@ -1,0 +1,335 @@
+
+/*=============== CUSTOM PROPERTIES ===============*/
+
+:root{
+    --color1:#4C5FD5;
+    --color2:#dadbf1;
+    --black:#000000;
+    --black-light:#191a1b;
+    --white:#fff;
+    --border-radius:6px;
+}
+    /*=============== GLOBALS ===============*/
+html{
+    font-size: 62.5%;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*=============== STYLES GENERALS ===============*/
+
+.container-center{
+    width: 95%;
+    max-width: 135rem;
+    margin: 0 auto;
+}
+
+
+/*=============== HEADER STYLES ===============*/
+
+.header{
+    background-color: var(--black);
+    padding: 1rem 0;
+}
+
+/* position  containers with flex */
+.header__bar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*spacing on logo */
+.logo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+ 
+}
+/* divider on logo size */
+.logo__divider{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+/* modified help center with a font weight more small */
+.logo__a--400{
+    font-weight: 400;
+}
+
+/* COLORS AND FONT SIZE FOR LOGO AND NAV ITEMS */
+.logo , .nav__li{
+    color: var(--white);
+    
+}
+
+.logo__a, .nav__a{
+    color:inherit;
+    font-size: 2.4rem;
+    transition: 0.3s ease-in-out;
+}
+
+.logo__a--opacity:hover{
+    opacity: 0.8;
+}
+
+.logo__a--underline:hover{
+    text-decoration: underline;
+}
+
+ /* comment when finish it*/
+/* .logo, .nav{
+    border: 1px solid red;
+} */
+
+/* NAV ITEMS */
+
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.nav__ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem ;
+}
+
+/* button general styles */
+
+.button{
+    padding: 1rem 3.2rem;
+    border-radius: var(--border-radius);
+    font-weight: 400;
+}
+
+/* modified buttons background colors */
+
+.button--blacklight{
+    background-color: var(--black-light);
+    border: 1px solid;
+}
+
+.button--blue{
+    background-color: var(--color1);
+}
+
+.button--blue:hover{
+    background-color: var(--white);
+    color: var(--black-light);
+}
+
+
+/*=============== HOW CAN WE HELP SECTION, SEARCHBAR ===============*/
+
+.search{
+    /* border: 2px solid red; */
+    background-color: var(--color2);
+}
+
+/* position content of search */
+
+.search__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    /* border: 2px solid red; */
+}
+
+/* content search styles */
+.search__h2{
+    font-size: 7.6rem;
+    font-weight: 400;
+}
+
+/* position relative for contain icon */
+.search__bar{
+    width: 100%;
+    max-width: 72rem;
+    margin-top: 3.2rem;
+    font-size: 2rem;
+    position: relative;
+}
+/* position absolute for icon */
+.search__icon{
+    position: absolute;
+    right: 2rem;
+    top: 2.2rem;
+    transition:0.3s ease-in-out ;
+    
+}
+/* search input styles */
+.search__input{
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--black);
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+/*search input effects when hover and keep styles on focus */
+.search__input:hover,
+.search__input:focus{
+    border-color: var(--color1);
+}
+/* changing color of icon too when hover on block bar */
+.search__bar:hover .search__icon
+{
+    color: var(--color1);
+}
+
+
+/*=============== SECTION MAIN ===============*/
+
+.services{
+    /* border: 1px solid red; */
+    padding: 7rem 3rem;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.services__article{
+    width: calc(93% / 2);
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+    
+}
+
+/* image styles of articles */
+
+.services__figure{
+    min-width: 8rem;
+    max-width: 9rem;
+    /* border: 2px solid blue;comment when finish */
+    margin-top: 2.2rem;
+}
+
+
+/* styles of fonts on articles services and links */
+.services__h3, .services__p{
+    font-size: 2.4rem;
+    margin: 1.8rem 0;
+}
+
+.services__a{
+    font-size: 2rem;
+    color: var(--color1);
+}
+
+
+/*=============== FOOTER ===============*/
+
+.footer{
+    padding: 4rem 0;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.footer--flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* footer fonts styles */
+
+.footer__h3{
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer__p{font-size: 2rem;}
+
+.footer__ul{
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.footer__a{color: inherit;}
+.footer__a:hover{text-decoration: underline;}
+
+/* modified items, COMPANY SECTION--> CONTACT US */
+.footer__li--margin{
+    margin-top: 2rem;
+}
+.footer__span{
+    display: block;
+    font-weight: bold;
+}
+
+/* footer copyright styles */
+.footer__copyright{
+    margin-top: 20rem;
+    align-self: end;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+
+/* 840px for section of services */
+
+@media screen and (max-width: 840px){
+
+    .services__article{
+        width: 100%;
+    }
+}
+
+/* 724px */
+@media screen and (max-width:724px){
+    /* header bar center */
+    .header__bar{
+        justify-content: center;
+    }
+
+    /* nav margin for spacing title and bottom  */
+    .nav{
+        margin:2rem 0;
+    }
+
+    /* footer */
+
+    .footer--flex{
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .footer__copyright{
+        margin-top: 3rem;
+        align-self: unset;
+    }
+
+}
+
+/* 424px for buttons on navbar */
+
+@media screen and (max-width: 424px){
+    .nav__ul{
+        justify-content: center;
+        line-height: 2;
+    }
+}
